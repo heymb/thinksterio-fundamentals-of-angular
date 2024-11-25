@@ -298,7 +298,13 @@
     }
   ],
   "rentalList": [],
-  "logins": [],
+  "logins": [
+    {
+      "userId": 3,
+      "loginDateTime": "2024-11-25T19:09:48.342Z",
+      "id": 1
+    }
+  ],
   "watchList": [
     {
       "id": 0,
