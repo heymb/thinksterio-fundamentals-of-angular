@@ -12,5 +12,6 @@ export const routingTable = [
   { path: 'flops/:id', component: FlopDetailsComponent },
   { path: 'login', component: LoginComponent },
   { path: 'actors', component: ActorListComponent },
+  { path: 'watchlist', loadChildren: () => import('./watch-list-module/watch-list.module').then(m => m.WatchListModule) },
   { path: '**', component: NotFoundComponent },
 ]

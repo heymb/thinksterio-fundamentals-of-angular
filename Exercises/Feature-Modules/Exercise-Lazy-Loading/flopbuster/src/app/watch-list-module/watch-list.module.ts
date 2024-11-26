@@ -7,7 +7,8 @@ import { RouterModule } from '@angular/router';
 import { WatchListComponent } from './watch-list.component';
 
 let routes = [
-  { path: 'watchlist', component: WatchListComponent },
+  // { path: 'watchlist', component: WatchListComponent },
+  { path: '', component: WatchListComponent },
 ]
 
 @NgModule({
