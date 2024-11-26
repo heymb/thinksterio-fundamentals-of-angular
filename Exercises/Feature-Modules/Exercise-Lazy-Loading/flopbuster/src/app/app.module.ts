@@ -17,6 +17,7 @@ import { LoginComponent } from './login/login.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { FlopSuggestionComponent } from './flop-suggestion/flop-suggestion.component';
 import { routingTable } from './routes';
+import { SecurityModule } from './security/security.module';
 
 @NgModule({
   imports:      [ 
@@ -24,6 +25,7 @@ import { routingTable } from './routes';
     FormsModule, HttpClientModule,
     WatchListModule,
     RouterModule.forRoot(routingTable),
+    SecurityModule,
      ],
   declarations: [ 
     AppComponent, 
