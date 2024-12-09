@@ -4,6 +4,8 @@ import { Movie } from './Movie';
 import { MovieService } from './movie.service';
 import { RentalListService } from './rental-list.service';
 
+import { ThirdPartyService } from './third-party.service';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'my-app',
@@ -15,12 +17,13 @@ export class AppComponent  {
   rentalList:any = [];
 
   constructor(private movieService: MovieService, 
-    private rentalListService: RentalListService) {
+    private rentalListService: RentalListService, private thirdParty: ThirdPartyService) {
   }
 
   ngOnInit() {
     this.flops$ = this.movieService.getMovies();
     this.getRentalList()
+    this.thirdParty.login(environment.username, environment.password);
   }
 
   getRentalList() {
